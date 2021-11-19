@@ -18,7 +18,7 @@ import javax.persistence.OrderColumn;
 @Entity
 public class Profile {
 
-	@Id
+	@Id 
 	@GeneratedValue
 	@Column(name="id")
 	Long id;
