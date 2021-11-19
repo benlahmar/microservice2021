@@ -34,8 +34,7 @@ public class Profile {
 	@OneToOne()
 	@JoinTable(name = "acc_profile",
 	joinColumns = {  @JoinColumn(name="id_p",referencedColumnName = "id")},
-	inverseJoinColumns = {@JoinColumn(name="id_acc",referencedColumnName = "id")}
-)
+	inverseJoinColumns = {@JoinColumn(name="id_acc",referencedColumnName = "id")})
 	Account account;
 	
 	public Long getId() {

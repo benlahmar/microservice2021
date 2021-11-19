@@ -6,7 +6,7 @@ import javax.persistence.Embeddable;
 public class Adresse {
 
 	String rue,ville,pays,codep;
-
+	
 	public String getRue() {
 		return rue;
 	}

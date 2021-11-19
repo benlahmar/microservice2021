@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 import org.springframework.data.annotation.CreatedDate;
 
 @Entity
-@Table(name = "")
+@NamedQuery(name = "Account.findRole", query = " select c from Account c where c.role = ?1 ")
 public class Account {
 
 	@Id

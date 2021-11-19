@@ -1,5 +1,6 @@
 package com.store;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,25 +30,14 @@ public class Cap1Application  implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Account acc= new Account("log", "pass", "role");
+		
 		 
 		//accrepo.save(acc);
+		Account cc = accrepo.findByLogAndPass("log", "pass");
+		System.out.println(cc.toString());
+		List<Account> as = accrepo.findRole("role");
 		
-		String[] prenoms= {"aa","bb"};
-		Adresse adresse=new Adresse("rue", "ville", "pays", "codep");
-		Profile p=new Profile("nom", "email", "tel", "sexe", prenoms, adresse);
-		
-		//prfrepo.save(p);
-		//System.out.println(p1.getAccount());
-		Account c = accrepo.findById(1L).get();
-		Profile p1 = prfrepo.findById(2L).get();
-		
-		p1.setAccount(c);
-		
-		//prfrepo.save(p1);
-		System.out.println(c.toString());
-		System.out.println(p1.toString());
-		
+		System.out.println(as.size());
 	}
 	
 	
