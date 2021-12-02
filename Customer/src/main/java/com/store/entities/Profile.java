@@ -15,6 +15,9 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.OrderColumn;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 public class Profile {
 
@@ -35,6 +38,7 @@ public class Profile {
 	@JoinTable(name = "acc_profile",
 	joinColumns = {  @JoinColumn(name="id_p",referencedColumnName = "id")},
 	inverseJoinColumns = {@JoinColumn(name="id_acc",referencedColumnName = "id")})
+	@JsonBackReference
 	Account account;
 	
 	public Long getId() {

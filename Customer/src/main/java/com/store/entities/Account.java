@@ -12,6 +12,10 @@ import javax.persistence.Table;
 
 import org.springframework.data.annotation.CreatedDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @NamedQuery(name = "Account.findRole", query = " select c from Account c where c.role = ?1 ")
 public class Account {
@@ -27,6 +31,7 @@ public class Account {
 	
 	@OneToOne(mappedBy = "account" )
 	@PrimaryKeyJoinColumn
+	@JsonManagedReference
 	Profile profile;
 	
 	

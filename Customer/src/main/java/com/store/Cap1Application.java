@@ -31,13 +31,13 @@ public class Cap1Application  implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		
-		 
-		//accrepo.save(acc);
-		Account cc = accrepo.findByLogAndPass("log", "pass");
-		System.out.println(cc.toString());
-		List<Account> as = accrepo.findRole("role");
-		
-		System.out.println(as.size());
+//		 
+//		//accrepo.save(acc);
+//		Account cc = accrepo.findByLogAndPass("log", "pass");
+//		System.out.println(cc.toString());
+//		List<Account> as = accrepo.findRole("role");
+//		
+//		System.out.println(as.size());
 	}
 	
 	
