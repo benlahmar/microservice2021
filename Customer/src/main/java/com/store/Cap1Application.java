@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.store.entities.Account;
@@ -15,13 +16,9 @@ import com.store.repos.IAccount;
 import com.store.repos.IProfile;
 
 @SpringBootApplication
-
 public class Cap1Application  implements CommandLineRunner{
 
-	@Autowired
-	IAccount accrepo;
-	@Autowired
-	IProfile prfrepo;
+	
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Cap1Application.class, args);

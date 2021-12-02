@@ -90,11 +90,12 @@ public class RestAccount {
 	}
 	
 	@PostMapping("/accounts/{idacc}/profile")
-	public void addproile(Profile p, long idacc)
+	public Account addproile(Profile p, long idacc)
 	{
 		Account c = accrepo.findById(idacc).get();
 		p.setAccount(c);
 		profrepo.save(p);
+		return c;
 	}
 	
 	
