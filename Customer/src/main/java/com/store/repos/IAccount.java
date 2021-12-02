@@ -22,8 +22,9 @@ public interface IAccount extends JpaRepository<Account, Long>{
 			List<Account> findRole(String r);
 			
 			@Query(value = "select c from Account c where c.pass=?1")
-			List<Account> findklk(String pass);
+			List<Account> findklk(String pass); 
 			
+			Page<Account> findByLog(String log, Pageable p);
 			
 
 }
