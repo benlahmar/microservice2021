@@ -18,6 +18,7 @@ import com.store.repos.IAccount;
 import com.store.repos.IProfile;
 
 @SpringBootApplication
+
 public class Cap1Application  implements CommandLineRunner{
 
 	
@@ -25,12 +26,13 @@ public class Cap1Application  implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(Cap1Application.class, args);
 	}
-
+/*
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 	return new BCryptPasswordEncoder();
 	}
-	
+	a62a2b47-b158-4716-828f-862547f1b54e
+	*/
 	
 	@Override
 	public void run(String... args) throws Exception {

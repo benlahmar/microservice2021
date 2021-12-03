@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.store.entities.Account;
 import com.store.repos.IAccount;
 
-@Service
+//@Service
 public class UserServiceDetailsImp implements UserDetailsService{
 
 	@Autowired

@@ -36,6 +36,7 @@ public class RestAccount {
 	@PostMapping("/accounts")
 	public ResponseEntity<Account> addaccount(@RequestBody Account ac)
 	{
+		
 		Account c = accrepo.save(ac);
 		ResponseEntity<Account> e=new ResponseEntity<Account>(c, HttpStatus.CREATED);
 		
