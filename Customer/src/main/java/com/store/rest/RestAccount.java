@@ -82,12 +82,12 @@ public class RestAccount {
 		  return e;
 	}
 	
-	@GetMapping("/accounts/search")
-	public Page<Account> bylog(@RequestParam(name = "log") String log,@RequestParam(name="page") int page, @RequestParam(name="size")  int size)
-	{
-		Pageable p=PageRequest.of(page, size);
-		return accrepo.findByLog(log, p);
-	}
+//	@GetMapping("/accounts/search")
+//	public Page<Account> bylog(@RequestParam(name = "log") String log,@RequestParam(name="page") int page, @RequestParam(name="size")  int size)
+//	{
+//		Pageable p=PageRequest.of(page, size);
+//		return accrepo.findByLog(log, p);
+//	}
 	
 	@PostMapping("/accounts/{idacc}/profile")
 	public Account addproile(Profile p, long idacc)

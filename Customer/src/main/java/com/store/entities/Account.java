@@ -94,5 +94,10 @@ public class Account {
 	}
 	
 	
-	
+	public Account(Account c) {
+		super();
+		this.log = c.getLog();
+		this.pass = c.getPass();
+		this.role = c.getRole();
+	}
 }
